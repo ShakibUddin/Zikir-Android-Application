@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_favourites.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\fragment_favourites.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_content_favourite_outline_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\content_favourite_outline_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_total_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\total_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_feedback_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\feedback_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\share_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_settings_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\settings_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_settings.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\fragment_settings.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rate_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\rate_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_menu.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\menu\\bottom_menu.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_read_button_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\read_button_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_language_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\language_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_copy_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\copy_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_max_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\max_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vibrate_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\vibrate_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_translation_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\translation_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\home_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_content_favourite_filled_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\content_favourite_filled_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_finger_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\finger_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_finger.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\ic_finger.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_privacy_policy_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\privacy_policy_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mode_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\mode_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_content_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\content_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_favourite_filled.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\favourite_filled.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_readpage_total_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\readpage_total_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icc_add.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\icc_add.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_item_layout.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\row_item_layout.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_fab_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\fab_style.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_checked_nav_item.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\checked_nav_item.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\font_baloo.ttf.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\font\\baloo.ttf"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_read.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\layout\\activity_read.xml"
+    }
+]

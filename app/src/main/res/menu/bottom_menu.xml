@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/homemenu"
+        android:title="Home"
+        android:icon="@drawable/home_icon"
+        android:enabled="true"
+        app:showAsAction="always"/>
+    <item android:id="@+id/favouritemenu"
+        android:title="Favourites"
+        android:icon="@drawable/favourite_filled"
+        android:enabled="true"
+        app:showAsAction="always"/>
+    <item android:id="@+id/settingsmenu"
+        android:title="Settings"
+        android:icon="@drawable/settings_icon"
+        android:enabled="true"
+        app:showAsAction="always"/>
+</menu>

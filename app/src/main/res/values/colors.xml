@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4669C3</color>
+    <color name="colorPrimaryDark">#324E98</color>
+    <color name="colorAccent">#4669C3</color>
+    <color name="fabColor">#6200EE</color>
+    <color name="fabTextColor">#FFFFFF</color>
+    <color name="appBackColor">#EFEFEF</color>
+    <color name="contentTextColor">#000000</color>
+    <color name="scoreTextColor">#FFFFFF</color>
+    <color name="contentBackColor">#FFFFFF</color>
+    <color name="scoreBackColor">#4669C3</color>
+    <color name="readButtonBackColor">#D19856</color>
+    <color name="navBarBackColor">#FFFFFF</color>
+    <color name="readButtonTextColor">#FFFFFF</color>
+    <color name="navBarTextColor">#FFFFFF</color>
+    <color name="navBarIconColor">#FFFFFF</color>
+    <color name="favouriteColor">#F44336</color>
+    <color name="shareColor">#3F51B5</color>
+    <color name="settingsTextColor">#000000</color>
+    <color name="dividerColor">#D5D5D5</color>
+</resources>
