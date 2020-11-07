@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\d6f2d911e6420eddbe1a6bafc49b6353\constraintlayout-2.0.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\bf96d2b5a86ecd602a621e7e96856420\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
@@ -37,25 +37,29 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\shaki\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\7282e00d74c6a6acf53f4bfd68421266\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\73114719268a97e9fd391905563b2ee9\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\1e0614212b25f4ae67724a3587ed8129\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
-INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:3:5-42
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-22:12
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:1-24:12
 		INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.VIBRATE
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:5:5-66
+	android:name
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:5:22-63
 application
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:5:5-20:19
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:7:5-22:19
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha03] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\e13d5284dee38561a14d3ffa3e8234dc\material-1.3.0-alpha03\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.2] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\d6f2d911e6420eddbe1a6bafc49b6353\constraintlayout-2.0.2\AndroidManifest.xml:9:5-20
@@ -67,39 +71,39 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\sh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\shaki\.gradle\caches\transforms-2\files-2.1\ae3468b444d41a56f261ecbb8448fe17\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:12:9-35
 	android:label
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:10:9-41
 	android:roundIcon
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:11:9-54
 	android:icon
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:9:9-43
 	android:allowBackup
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:11:9-40
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:9-40
 activity#com.sakibuddinbhuiyan.zikir.Read
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:12:9-88
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:9-88
 	android:screenOrientation
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:12:40-76
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:40-76
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:12:19-39
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:19-39
 activity#com.sakibuddinbhuiyan.zikir.MainActivity
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:9-19:20
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:screenOrientation
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:48-84
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:48-84
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:19-47
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:13-18:29
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:17-69
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:25-66
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:17:17-77
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:17:27-74
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:19:27-74
 uses-sdk
 INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml

@@ -2,8 +2,10 @@ package com.sakibuddinbhuiyan.zikir;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -23,6 +25,7 @@ public class Read extends AppCompatActivity {
     private int clickedToday = 0;
     private int clickedNow = 0;
     private DatabaseHandler databaseHandler;
+    private Vibrator vibrator;
 
     @Override
     public void onBackPressed() {
@@ -36,6 +39,7 @@ public class Read extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read);
 
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         favourite = (ImageButton) findViewById(R.id.boookmarkButton);
         databaseHandler = new DatabaseHandler(getApplicationContext(),DatabaseHandler.DATABASE_NAME,null,DatabaseHandler.DATABASE_VERSION);
 
@@ -82,6 +86,9 @@ public class Read extends AppCompatActivity {
         fingerPrintButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(PublicVariables.vibrate == 1){
+                    vibrator.vibrate(100);
+                }
                 ++clickedToday;
                 ++clickedNow;
                 readPageTotal.setText(String.valueOf(clickedNow));

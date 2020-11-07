@@ -20,12 +20,12 @@
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\content_favourite_outline_icon.xml"
     },
     {
-        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_total_style.xml.flat",
-        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\total_style.xml"
-    },
-    {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_feedback_icon.xml.flat",
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\feedback_icon.xml"
+    },
+    {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_total_style.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\total_style.xml"
     },
     {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_share_icon.xml.flat",
@@ -64,12 +64,16 @@
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\read_button_style.xml"
     },
     {
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_language_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\language_icon.xml"
+    },
+    {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_language_icon.xml.flat",
-        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\language_icon.xml"
+        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vibrate_icon.xml.flat",
+        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\vibrate_icon.xml"
     },
     {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_copy_icon.xml.flat",
@@ -80,16 +84,8 @@
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\max_style.xml"
     },
     {
-        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_vibrate_icon.xml.flat",
-        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\vibrate_icon.xml"
-    },
-    {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_translation_icon.xml.flat",
-        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\translation_icon.xml"
     },
     {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
@@ -126,10 +122,6 @@
     {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_privacy_policy_icon.xml.flat",
         "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\privacy_policy_icon.xml"
-    },
-    {
-        "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mode_icon.xml.flat",
-        "source": "E:\\MyCodes\\Zikr-Android-App-master\\app\\src\\main\\res\\drawable\\mode_icon.xml"
     },
     {
         "merged": "E:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",

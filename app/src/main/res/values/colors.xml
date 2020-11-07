@@ -16,7 +16,13 @@
     <color name="navBarTextColor">#FFFFFF</color>
     <color name="navBarIconColor">#FFFFFF</color>
     <color name="favouriteColor">#F44336</color>
-    <color name="shareColor">#3F51B5</color>
     <color name="settingsTextColor">#000000</color>
     <color name="dividerColor">#D5D5D5</color>
+    <color name="languageColor">#673AB7</color>
+    <color name="vibrateColor">#8BC34A</color>
+    <color name="shareColor">#3F51B5</color>
+    <color name="rateColor">#FFEB3B</color>
+    <color name="feedBackColor">#E91E63</color>
+    <color name="privacyColor">#1EE9BA</color>
+
 </resources>

@@ -1025,10 +1025,12 @@ color error_color_material_light
 color fabColor
 color fabTextColor
 color favouriteColor
+color feedBackColor
 color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color languageColor
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1126,7 +1128,9 @@ color primary_text_default_material_dark
 color primary_text_default_material_light
 color primary_text_disabled_material_dark
 color primary_text_disabled_material_light
+color privacyColor
 color radiobutton_themeable_attribute_color
+color rateColor
 color readButtonBackColor
 color readButtonTextColor
 color ripple_material_dark
@@ -1149,6 +1153,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color vibrateColor
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1659,7 +1664,6 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable max_style
-drawable mode_icon
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1692,7 +1696,6 @@ drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable total_style
-drawable translation_icon
 drawable vibrate_icon
 font baloo
 id ALT
@@ -1817,7 +1820,6 @@ id cos
 id custom
 id customPanel
 id cut
-id darkMode
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -1901,7 +1903,6 @@ id languages
 id largeLabel
 id layout
 id left
-id lightMode
 id line1
 id line3
 id linear
@@ -1930,7 +1931,6 @@ id material_value_index
 id message
 id middle
 id mini
-id mode
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle

@@ -95,61 +95,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                     </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@color/dividerColor"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-                        <ImageView
-                            android:layout_weight="6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:padding="10dp"
-                            app:srcCompat="@drawable/mode_icon"/>
-                        <LinearLayout
-                            android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-                            <TextView
-                                android:layout_weight="2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textAllCaps="false"
-                                android:textColor="@color/settingsTextColor"
-                                android:textSize="18sp"
-                                android:padding="10dp"
-                                android:text="Mode" />
-                            <RadioGroup
-                                android:id="@+id/mode"
-                                android:layout_weight="1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="10dp"
-                                android:orientation="horizontal">
-                                <RadioButton
-                                    android:layout_weight="1"
-                                    android:id="@+id/lightMode"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Light"/>
-                                <RadioButton
-                                    android:layout_weight="1"
-                                    android:id="@+id/darkMode"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="Dark"/>
-                            </RadioGroup>
-                        </LinearLayout>
 
-                    </LinearLayout>
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

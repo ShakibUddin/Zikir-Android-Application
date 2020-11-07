@@ -34,38 +34,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String TABLE_DATE = "DateRecord";
     public static final String DATE = "Date";
 
-    public static LinkedList<String> zikrData = new LinkedList<>(Arrays.asList(
-            "Quran: Ultimately, the best dhikr is reading the Quran.\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "You will be rewarded 10 rewards for each letter read.",
-            "SubhanAllah or SubhanAllah wa bihamdihi\n" +
-                    "(“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.”)\n" +
-                    "\n" +
-                    "Reward: \n" +
-                    "\n" +
-                    "A tree will be planted for you in Paradise. ",
-            "whoever says \"SubhanAllah or SubhanAllah wa bihamdihi\" 100 times a day, his/her sins will be forgiven even if they were as much as the foam of the sea",
-            "Alhamdulillah\n" +
-                    "(“All praise is for Allah”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "Your scales will be tipped on the Day of Judgment, full of rewards!\n" +
-                    "\n",
-            "La hawla wa la quwwata illa billah \n" +
-                    "(“There is no power or might except (by) Allah.”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "You will enter through a special door in Paradise for those who oft use this remembrance.",
-            "SubhanAllah (x33), Alhamdulillah (x33), Allahu akbar (x34)\n" +
-                    "Can be recited after salat and before you go to bed/sleep. (“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.  All praise is to Allah.  Allah is Great.”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "We know that this dhikr is said after each salah, but when Fatima raḍyAllāhu anha (may Allāh be pleased with her) the daughter of the Prophet came to her father requesting a servant to help with the household, the Messenger of Allah ṣallallāhu alayhi wa sallam (peace and blessings of Allāh be upon him) told her to repeat the dhikr before her sleep and the results would be better than having a servant."
-    ));
+    public static final String TABLE_SETTINGS = "Settings";
+    public static final String VIBRATE = "Vibrate";
+    public static final String LANGUAGE = "Language";
+    public static final String MODE = "Mode";
 
 
     public DatabaseHandler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
@@ -75,6 +47,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         createZikirTable(sqLiteDatabase);
+        createSettingsTable(sqLiteDatabase);
+        initilizeSettings(sqLiteDatabase);
         createDateTable(sqLiteDatabase);
         initilizeDate(sqLiteDatabase);
         for (String zikir : zikrData) {
@@ -104,11 +78,20 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     void createDateTable(SQLiteDatabase db) {
-        String CREATE_Date_TABLE = "CREATE TABLE " + TABLE_DATE + "(" +
+        String CREATE_DATE_TABLE = "CREATE TABLE " + TABLE_DATE + "(" +
                 DATE + " TEXT" +
                 ")";
-        Log.d("TableCreation", "date table sql = " + CREATE_Date_TABLE);
-        db.execSQL(CREATE_Date_TABLE);
+        Log.d("TableCreation", "date table sql = " + CREATE_DATE_TABLE);
+        db.execSQL(CREATE_DATE_TABLE);
+    }
+
+    void createSettingsTable(SQLiteDatabase db) {
+        String CREATE_SETTINGS_TABLE = "CREATE TABLE " + TABLE_SETTINGS + "(" +
+                VIBRATE + " INTEGER," +
+                LANGUAGE + " TEXT" +
+                ")";
+        Log.d("TableCreation", "settings table sql = " + CREATE_SETTINGS_TABLE);
+        db.execSQL(CREATE_SETTINGS_TABLE);
     }
 
     //initializing table
@@ -136,6 +119,55 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // Inserting Row
         sqLiteDatabase.insert(TABLE_DATE, null, values);
         //2nd argument is String containing nullColumnHack
+    }
+
+    void initilizeSettings(SQLiteDatabase sqLiteDatabase) {
+        ContentValues values = new ContentValues();
+        values.put(VIBRATE, 0);
+        values.put(LANGUAGE, "English");
+
+        Log.d("TableInsert", "settings data: " + values.toString());
+        // Inserting Row
+        sqLiteDatabase.insert(TABLE_SETTINGS, null, values);
+        //2nd argument is String containing nullColumnHack
+    }
+    public int getVibrateStatus() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "Select "+VIBRATE+" From " + TABLE_SETTINGS;
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+
+        int vibrate = cursor.getInt(0);
+
+        cursor.close();
+        // return vibrate
+        return vibrate;
+    }
+    public void updateVibrateStatusInDatabase(int status) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(VIBRATE, status);
+
+        Log.d("TableUpdate", "update vibrate status: " + values.toString());
+        // Updating Row
+        db.update(TABLE_SETTINGS, values, null, null);
+        //2nd argument is String containing nullColumnHack
+        db.close(); // Closing database connection
+    }
+    public String getLanguageStatus() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = "Select "+LANGUAGE+" From " + TABLE_SETTINGS;
+        Cursor cursor = db.rawQuery(query, null);
+        if (cursor != null)
+            cursor.moveToFirst();
+
+        String language = cursor.getString(0);
+
+        cursor.close();
+        // return language
+        return language;
     }
 
     public String getDate() {
@@ -265,4 +297,36 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         Log.d(DatabaseHandler.class.getName(),"update favourite query: "+query);
         db.close();
     }
+    public static LinkedList<String> zikrData = new LinkedList<>(Arrays.asList(
+            "Quran: Ultimately, the best dhikr is reading the Quran.\n" +
+                    "Reward:\n" +
+                    "\n" +
+                    "You will be rewarded 10 rewards for each letter read.",
+            "SubhanAllah or SubhanAllah wa bihamdihi\n" +
+                    "(“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.”)\n" +
+                    "\n" +
+                    "Reward: \n" +
+                    "\n" +
+                    "A tree will be planted for you in Paradise. ",
+            "whoever says \"SubhanAllah or SubhanAllah wa bihamdihi\" 100 times a day, his/her sins will be forgiven even if they were as much as the foam of the sea",
+            "Alhamdulillah\n" +
+                    "(“All praise is for Allah”)\n" +
+                    "\n" +
+                    "Reward:\n" +
+                    "\n" +
+                    "Your scales will be tipped on the Day of Judgment, full of rewards!\n" +
+                    "\n",
+            "La hawla wa la quwwata illa billah \n" +
+                    "(“There is no power or might except (by) Allah.”)\n" +
+                    "\n" +
+                    "Reward:\n" +
+                    "\n" +
+                    "You will enter through a special door in Paradise for those who oft use this remembrance.",
+            "SubhanAllah (x33), Alhamdulillah (x33), Allahu akbar (x34)\n" +
+                    "Can be recited after salat and before you go to bed/sleep. (“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.  All praise is to Allah.  Allah is Great.”)\n" +
+                    "\n" +
+                    "Reward:\n" +
+                    "\n" +
+                    "We know that this dhikr is said after each salah, but when Fatima raḍyAllāhu anha (may Allāh be pleased with her) the daughter of the Prophet came to her father requesting a servant to help with the household, the Messenger of Allah ṣallallāhu alayhi wa sallam (peace and blessings of Allāh be upon him) told her to repeat the dhikr before her sleep and the results would be better than having a servant."
+    ));
 }

@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.sakibuddinbhuiyan.zikir.database.DatabaseHandler;
 import com.sakibuddinbhuiyan.zikir.fragments.FragmentFavourites;
 import com.sakibuddinbhuiyan.zikir.fragments.FragmentHome;
 import com.sakibuddinbhuiyan.zikir.fragments.FragmentSettings;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FrameLayout frameLayout;
     private BottomNavigationView bottomNavigationView;
+    private DatabaseHandler databaseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,12 @@ public class MainActivity extends AppCompatActivity {
         frameLayout = (FrameLayout)findViewById(R.id.fragmentContainer);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigation);
 
+        databaseHandler = new DatabaseHandler(getApplicationContext(), DatabaseHandler.DATABASE_NAME, null, DatabaseHandler.DATABASE_VERSION);
+
+        //getting settings state from database
+        PublicVariables.vibrate = databaseHandler.getVibrateStatus();
+        PublicVariables.selectedLanguage = databaseHandler.getLanguageStatus();
+
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         //I added this if statement to keep the selected fragment when rotating the device
         if (savedInstanceState == null) {
@@ -34,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {

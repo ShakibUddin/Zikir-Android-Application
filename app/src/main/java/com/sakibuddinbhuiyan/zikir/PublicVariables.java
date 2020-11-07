@@ -13,7 +13,5 @@ public class PublicVariables {
     public static LinkedList<Integer> favouriteList = new LinkedList<>();
     public static LinkedList<String> zikirLanguages = new LinkedList<>(Arrays.asList("English","Bangla"));
     public static String selectedLanguage;
-    public static Boolean vibrate;
-    public static Boolean light = true;
-    public static Boolean dark;
+    public static int vibrate;
 }
