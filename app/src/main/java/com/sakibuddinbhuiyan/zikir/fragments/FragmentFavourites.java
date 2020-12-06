@@ -12,11 +12,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sakibuddinbhuiyan.zikir.PublicVariables;
+import com.sakibuddinbhuiyan.zikir.utils.PublicVariables;
 import com.sakibuddinbhuiyan.zikir.R;
-import com.sakibuddinbhuiyan.zikir.ZikirListAdapter;
+import com.sakibuddinbhuiyan.zikir.adapters.ZikirListAdapter;
 import com.sakibuddinbhuiyan.zikir.database.DatabaseHandler;
-import com.sakibuddinbhuiyan.zikir.database.Zikir;
+import com.sakibuddinbhuiyan.zikir.models.Zikir;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

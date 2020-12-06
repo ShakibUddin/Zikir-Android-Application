@@ -22,10 +22,10 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.sakibuddinbhuiyan.zikir.Read"
+            android:name="com.sakibuddinbhuiyan.zikir.activities.Read"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.sakibuddinbhuiyan.zikir.MainActivity"
+            android:name="com.sakibuddinbhuiyan.zikir.activities.MainActivity"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

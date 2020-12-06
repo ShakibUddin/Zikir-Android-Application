@@ -40,6 +40,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
+                                android:id="@+id/languageTextView"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -80,6 +81,7 @@
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
                             <TextView
+                                android:id="@+id/vibrateTextView"
                                 android:layout_weight="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -87,7 +89,7 @@
                                 android:textColor="@color/settingsTextColor"
                                 android:textSize="18sp"
                                 android:padding="10dp"
-                                android:text="Vibrate on count" />
+                                android:text="Vibrate" />
                             <com.google.android.material.switchmaterial.SwitchMaterial
                                 android:layout_weight="1"
                                 android:id="@+id/vibrate"
@@ -172,7 +174,7 @@
                             android:textColor="@color/settingsTextColor"
                             android:textSize="18sp"
                             android:padding="10dp"
-                            android:text="Feedback" />
+                            android:text="Give Feedback" />
 
                     </LinearLayout>
                     <LinearLayout

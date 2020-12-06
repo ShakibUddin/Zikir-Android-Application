@@ -82,18 +82,18 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\sh
 		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
 		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.sakibuddinbhuiyan.zikir.Read
-ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:9-88
+activity#com.sakibuddinbhuiyan.zikir.activities.Read
+ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:9-99
 	android:screenOrientation
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:40-76
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:51-87
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:19-39
-activity#com.sakibuddinbhuiyan.zikir.MainActivity
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:19-50
+activity#com.sakibuddinbhuiyan.zikir.activities.MainActivity
 ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:9-21:20
 	android:screenOrientation
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:48-84
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:59-95
 	android:name
-		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:19-47
+		ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:19-58
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN

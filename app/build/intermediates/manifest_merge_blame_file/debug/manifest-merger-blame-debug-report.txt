@@ -33,17 +33,17 @@
 22        android:theme="@style/AppTheme" >
 22-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:13:9-40
 23        <activity
-23-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:9-88
-24            android:name="com.sakibuddinbhuiyan.zikir.Read"
-24-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:19-39
+23-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:9-99
+24            android:name="com.sakibuddinbhuiyan.zikir.activities.Read"
+24-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:19-50
 25            android:screenOrientation="portrait" />
-25-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:40-76
+25-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:14:51-87
 26        <activity
 26-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:9-21:20
-27            android:name="com.sakibuddinbhuiyan.zikir.MainActivity"
-27-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:19-47
+27            android:name="com.sakibuddinbhuiyan.zikir.activities.MainActivity"
+27-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:19-58
 28            android:screenOrientation="portrait" >
-28-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:48-84
+28-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:15:59-95
 29            <intent-filter>
 29-->E:\MyCodes\Zikr-Android-App-master\app\src\main\AndroidManifest.xml:16:13-20:29
 30                <action android:name="android.intent.action.MAIN" />

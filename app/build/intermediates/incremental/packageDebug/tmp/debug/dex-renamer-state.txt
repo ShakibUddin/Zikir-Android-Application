@@ -1,4 +1,4 @@
-#Sat Nov 07 19:11:57 BDT 2020
+#Sun Dec 06 22:50:07 BDT 2020
 base.0=E\:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

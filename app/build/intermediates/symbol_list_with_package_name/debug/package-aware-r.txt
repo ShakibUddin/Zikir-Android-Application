@@ -50,7 +50,6 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
-array languages
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1899,6 +1898,7 @@ id jumpToEnd
 id jumpToStart
 id labelGroup
 id labeled
+id languageTextView
 id languages
 id largeLabel
 id layout
@@ -2113,6 +2113,7 @@ id unlabeled
 id up
 id useLogo
 id vibrate
+id vibrateTextView
 id view_offset_helper
 id visible
 id withText

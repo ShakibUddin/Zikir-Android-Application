@@ -12,11 +12,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sakibuddinbhuiyan.zikir.PublicVariables;
+import com.sakibuddinbhuiyan.zikir.activities.MainActivity;
+import com.sakibuddinbhuiyan.zikir.utils.PublicVariables;
 import com.sakibuddinbhuiyan.zikir.R;
-import com.sakibuddinbhuiyan.zikir.ZikirListAdapter;
+import com.sakibuddinbhuiyan.zikir.adapters.ZikirListAdapter;
 import com.sakibuddinbhuiyan.zikir.database.DatabaseHandler;
-import com.sakibuddinbhuiyan.zikir.database.Zikir;
+import com.sakibuddinbhuiyan.zikir.models.Zikir;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,26 +32,6 @@ public class FragmentHome extends Fragment {
     private String today = "";
     private String TAG = "MainActivity";
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        //clearing data
-        PublicVariables.zikrList.clear();
-        PublicVariables.todayList.clear();
-        PublicVariables.totalList.clear();
-        PublicVariables.favouriteList.clear();
-
-        PublicVariables.zikirObjList = databaseHandler.getAllZikirData();
-
-        for (Zikir zikirObj : PublicVariables.zikirObjList) {
-            PublicVariables.zikrList.add(zikirObj.zikir);
-            PublicVariables.todayList.add(zikirObj.readToday);
-            PublicVariables.totalList.add(zikirObj.readTotal);
-            PublicVariables.favouriteList.add(zikirObj.favourite);
-        }
-        mAdapter.notifyDataSetChanged();
-        Log.d(TAG, "onResume");
-    }
 
     @Nullable
     @Override
@@ -75,6 +56,7 @@ public class FragmentHome extends Fragment {
         mRecyclerView = rootView.findViewById(R.id.recycleView);
         //clearing data
         PublicVariables.zikrList.clear();
+        PublicVariables.zikrBanglaList.clear();
         PublicVariables.todayList.clear();
         PublicVariables.totalList.clear();
         PublicVariables.favouriteList.clear();
@@ -83,6 +65,7 @@ public class FragmentHome extends Fragment {
 
         for (Zikir zikirObj : PublicVariables.zikirObjList) {
             PublicVariables.zikrList.add(zikirObj.zikir);
+            PublicVariables.zikrBanglaList.add(zikirObj.zikirBangla);
             PublicVariables.todayList.add(zikirObj.readToday);
             PublicVariables.totalList.add(zikirObj.readTotal);
             PublicVariables.favouriteList.add(zikirObj.favourite);

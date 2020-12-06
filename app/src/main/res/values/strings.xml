@@ -1,8 +1,4 @@
 <resources>
     <string name="app_name">Zikir</string>
     <string name="contentTextSize">20</string>
-    <string-array name="languages">
-        <item>English</item>
-        <item>Bangla</item>
-    </string-array>
 </resources>

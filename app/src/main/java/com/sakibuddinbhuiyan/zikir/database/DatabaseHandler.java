@@ -9,24 +9,23 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import com.sakibuddinbhuiyan.zikir.PublicVariables;
+import com.sakibuddinbhuiyan.zikir.models.Zikir;
+import com.sakibuddinbhuiyan.zikir.utils.Data;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class DatabaseHandler extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
     public static final String DATABASE_NAME = "Zikir";
 
     public static final String TABLE_ZIKIR = "ZikirRecord";
     public static final String ID = "Id";
     public static final String ZIKIR = "Zikir";
+    public static final String ZIKIR_BANGLA = "zikirBangla";
     public static final String READ_TODAY = "ReadToday";
     public static final String READ_TOTAL = "ReadTotal";
     public static final String FAVOURITE = "favourite";
@@ -51,15 +50,18 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         initilizeSettings(sqLiteDatabase);
         createDateTable(sqLiteDatabase);
         initilizeDate(sqLiteDatabase);
-        for (String zikir : zikrData) {
-            fillZikirTable(sqLiteDatabase, zikir);
+        for (Map.Entry<String, String> entry : Data.zikrData.entrySet()) {
+            fillZikirTable(sqLiteDatabase, entry.getKey(), entry.getValue());
         }
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
         // Drop older table if existed
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_ZIKIR + ";");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_SETTINGS + ";");
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + TABLE_DATE + ";");
 
         // Create tables again
         onCreate(sqLiteDatabase);
@@ -69,6 +71,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_Zikir_TABLE = "CREATE TABLE " + TABLE_ZIKIR + "(" +
                 ID + " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
                 ZIKIR + " TEXT," +
+                ZIKIR_BANGLA + " TEXT," +
                 READ_TODAY + " INTEGER," +
                 READ_TOTAL + " INTEGER," +
                 FAVOURITE + " INTEGER" +
@@ -95,9 +98,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
 
     //initializing table
-    void fillZikirTable(SQLiteDatabase sqLiteDatabase, String zikir) {
+    void fillZikirTable(SQLiteDatabase sqLiteDatabase, String zikir, String zikirBangla) {
         ContentValues values = new ContentValues();
         values.put(ZIKIR, zikir);
+        values.put(ZIKIR_BANGLA, zikirBangla);
         values.put(READ_TODAY, 0);
         values.put(READ_TOTAL, 0);
         values.put(FAVOURITE, 0);
@@ -131,9 +135,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         sqLiteDatabase.insert(TABLE_SETTINGS, null, values);
         //2nd argument is String containing nullColumnHack
     }
+
     public int getVibrateStatus() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "Select "+VIBRATE+" From " + TABLE_SETTINGS;
+        String query = "Select " + VIBRATE + " From " + TABLE_SETTINGS;
         Cursor cursor = db.rawQuery(query, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -144,6 +149,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // return vibrate
         return vibrate;
     }
+
     public void updateVibrateStatusInDatabase(int status) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -156,9 +162,23 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         //2nd argument is String containing nullColumnHack
         db.close(); // Closing database connection
     }
+
+    public void updateLanguageStatusInDatabase(String language) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(LANGUAGE, language);
+
+        Log.d("TableUpdate", "update language status: " + values.toString());
+        // Updating Row
+        db.update(TABLE_SETTINGS, values, null, null);
+        //2nd argument is String containing nullColumnHack
+        db.close(); // Closing database connection
+    }
+
     public String getLanguageStatus() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "Select "+LANGUAGE+" From " + TABLE_SETTINGS;
+        String query = "Select " + LANGUAGE + " From " + TABLE_SETTINGS;
         Cursor cursor = db.rawQuery(query, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -183,9 +203,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // return date
         return date;
     }
+
     public Integer getIdOfZikir(String inputZikir) {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = "Select "+ ID +" From " + TABLE_ZIKIR +" Where "+ZIKIR + " = \'"+ inputZikir + "\'";
+        String query = "Select " + ID + " From " + TABLE_ZIKIR + " Where " + ZIKIR + " = \'" + inputZikir + "\'";
         Cursor cursor = db.rawQuery(query, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -237,9 +258,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Zikir zikirObj = new Zikir(
                         //skipping column index(to keep query short) 0 as its answerSetId
                         cursor.getString(1),
-                        Integer.parseInt(cursor.getString(2)),
+                        cursor.getString(2),
                         Integer.parseInt(cursor.getString(3)),
-                        Integer.parseInt(cursor.getString(4))
+                        Integer.parseInt(cursor.getString(4)),
+                        Integer.parseInt(cursor.getString(5))
                 );
                 // Adding answer set to list
                 zikirList.add(zikirObj);
@@ -250,10 +272,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         // return zikir list
         return zikirList;
     }
+
     public LinkedList<Zikir> getAllfavouritedZikirData() {
         LinkedList<Zikir> favouritedZikirList = new LinkedList<Zikir>();
         // Select All Query
-        String selectQuery = "SELECT * FROM " + TABLE_ZIKIR + " Where "+ FAVOURITE + " = 1";
+        String selectQuery = "SELECT * FROM " + TABLE_ZIKIR + " Where " + FAVOURITE + " = 1";
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -264,9 +287,10 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 Zikir zikirObj = new Zikir(
                         //skipping column index(to keep query short) 0 as its answerSetId
                         cursor.getString(1),
-                        Integer.parseInt(cursor.getString(2)),
+                        cursor.getString(2),
                         Integer.parseInt(cursor.getString(3)),
-                        Integer.parseInt(cursor.getString(4))
+                        Integer.parseInt(cursor.getString(4)),
+                        Integer.parseInt(cursor.getString(5))
                 );
                 // Adding answer set to list
                 favouritedZikirList.add(zikirObj);
@@ -294,39 +318,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "Update " + TABLE_ZIKIR + " Set " + FAVOURITE + " = " + status + " Where " + ID + " = " + inputId;
         db.execSQL(query);
-        Log.d(DatabaseHandler.class.getName(),"update favourite query: "+query);
+        Log.d(DatabaseHandler.class.getName(), "update favourite query: " + query);
         db.close();
     }
-    public static LinkedList<String> zikrData = new LinkedList<>(Arrays.asList(
-            "Quran: Ultimately, the best dhikr is reading the Quran.\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "You will be rewarded 10 rewards for each letter read.",
-            "SubhanAllah or SubhanAllah wa bihamdihi\n" +
-                    "(“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.”)\n" +
-                    "\n" +
-                    "Reward: \n" +
-                    "\n" +
-                    "A tree will be planted for you in Paradise. ",
-            "whoever says \"SubhanAllah or SubhanAllah wa bihamdihi\" 100 times a day, his/her sins will be forgiven even if they were as much as the foam of the sea",
-            "Alhamdulillah\n" +
-                    "(“All praise is for Allah”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "Your scales will be tipped on the Day of Judgment, full of rewards!\n" +
-                    "\n",
-            "La hawla wa la quwwata illa billah \n" +
-                    "(“There is no power or might except (by) Allah.”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "You will enter through a special door in Paradise for those who oft use this remembrance.",
-            "SubhanAllah (x33), Alhamdulillah (x33), Allahu akbar (x34)\n" +
-                    "Can be recited after salat and before you go to bed/sleep. (“I praise Allah (or All praise if to Allah) above all attributes that do not suit His Majesty.  All praise is to Allah.  Allah is Great.”)\n" +
-                    "\n" +
-                    "Reward:\n" +
-                    "\n" +
-                    "We know that this dhikr is said after each salah, but when Fatima raḍyAllāhu anha (may Allāh be pleased with her) the daughter of the Prophet came to her father requesting a servant to help with the household, the Messenger of Allah ṣallallāhu alayhi wa sallam (peace and blessings of Allāh be upon him) told her to repeat the dhikr before her sleep and the results would be better than having a servant."
-    ));
+
 }
