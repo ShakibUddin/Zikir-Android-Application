@@ -3,13 +3,16 @@ package com.sakibuddinbhuiyan.zikir.database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 import com.sakibuddinbhuiyan.zikir.models.Zikir;
+import com.sakibuddinbhuiyan.zikir.models.ZikirDowload;
 import com.sakibuddinbhuiyan.zikir.utils.Data;
 
 import java.text.SimpleDateFormat;
@@ -36,8 +39,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String TABLE_SETTINGS = "Settings";
     public static final String VIBRATE = "Vibrate";
     public static final String LANGUAGE = "Language";
-    public static final String MODE = "Mode";
 
+    private static final String TAG = "DatabaseHandler";
 
     public DatabaseHandler(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -112,6 +115,35 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         //2nd argument is String containing nullColumnHack
     }
 
+    public boolean contentAlreadyExists(ZikirDowload zikirDowload){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String english = zikirDowload.getEnglish();
+        String query = "SELECT COUNT(*) FROM " + TABLE_ZIKIR + " WHERE "+ ZIKIR + " = \'"+english+"\'";
+        long count = DatabaseUtils.longForQuery(db, query, null);
+        Log.d(TAG, "content: " + english);
+        Log.d(TAG, "total row: " + count);
+        if(count > 0)return true;
+        return false;
+    }
+
+    public void addDownloadedZikirinDatabase(ZikirDowload zikirDowload) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(ZIKIR, zikirDowload.getEnglish());
+        values.put(ZIKIR_BANGLA, zikirDowload.getBangla());
+        values.put(READ_TODAY, 0);
+        values.put(READ_TOTAL, 0);
+        values.put(FAVOURITE, 0);
+
+        Log.d(TAG, "update zikir status: " + values.toString());
+        // Updating Row
+        db.insert(TABLE_ZIKIR, null, values);
+        //2nd argument is String containing nullColumnHack
+        db.close(); // Closing database connection
+    }
+
     //adding first date when app opened
     void initilizeDate(SQLiteDatabase sqLiteDatabase) {
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
@@ -119,7 +151,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(DATE, String.valueOf(formatter.format(date)));
 
-        Log.d("TableInsert", "date data: " + values.toString());
+        Log.d(TAG, "date data: " + values.toString());
         // Inserting Row
         sqLiteDatabase.insert(TABLE_DATE, null, values);
         //2nd argument is String containing nullColumnHack
@@ -130,7 +162,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(VIBRATE, 0);
         values.put(LANGUAGE, "English");
 
-        Log.d("TableInsert", "settings data: " + values.toString());
+        Log.d(TAG, "settings data: " + values.toString());
         // Inserting Row
         sqLiteDatabase.insert(TABLE_SETTINGS, null, values);
         //2nd argument is String containing nullColumnHack
@@ -156,7 +188,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(VIBRATE, status);
 
-        Log.d("TableUpdate", "update vibrate status: " + values.toString());
+        Log.d(TAG, "update vibrate status: " + values.toString());
         // Updating Row
         db.update(TABLE_SETTINGS, values, null, null);
         //2nd argument is String containing nullColumnHack
@@ -169,7 +201,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(LANGUAGE, language);
 
-        Log.d("TableUpdate", "update language status: " + values.toString());
+        Log.d(TAG, "update language status: " + values.toString());
         // Updating Row
         db.update(TABLE_SETTINGS, values, null, null);
         //2nd argument is String containing nullColumnHack
@@ -224,7 +256,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(DATE, today);
 
-        Log.d("TableUpdate", "update date data: " + values.toString());
+        Log.d(TAG, "update date data: " + values.toString());
         // Updating Row
         db.update(TABLE_DATE, values, null, null);
         //2nd argument is String containing nullColumnHack
@@ -237,7 +269,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(READ_TODAY, 0);
 
-        Log.d("TableUpdate", "update zikir data: " + values.toString());
+        Log.d(TAG, "update zikir data: " + values.toString());
         // Updating Row
         db.update(TABLE_ZIKIR, values, null, null);
         //2nd argument is String containing nullColumnHack
@@ -318,7 +350,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "Update " + TABLE_ZIKIR + " Set " + FAVOURITE + " = " + status + " Where " + ID + " = " + inputId;
         db.execSQL(query);
-        Log.d(DatabaseHandler.class.getName(), "update favourite query: " + query);
+        Log.d(TAG, "update favourite query: " + query);
         db.close();
     }
 

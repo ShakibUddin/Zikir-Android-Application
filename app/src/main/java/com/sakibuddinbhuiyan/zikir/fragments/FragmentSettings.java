@@ -1,7 +1,9 @@
 package com.sakibuddinbhuiyan.zikir.fragments;
 
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,9 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,10 +24,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.sakibuddinbhuiyan.zikir.BuildConfig;
 import com.sakibuddinbhuiyan.zikir.activities.MainActivity;
+import com.sakibuddinbhuiyan.zikir.models.ZikirDowload;
 import com.sakibuddinbhuiyan.zikir.utils.PublicVariables;
 import com.sakibuddinbhuiyan.zikir.R;
 import com.sakibuddinbhuiyan.zikir.database.DatabaseHandler;
@@ -44,11 +55,16 @@ public class FragmentSettings extends Fragment {
     private TextView rateUs;
     private TextView feedBack;
     private TextView privacyPolicy;
+    private Button download;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private int totalDownloaded = 0;
+
     private static final String TAG = "FragmentSettings";
     private int count=0;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_settings, container, false);
+
 
         languages = (Spinner)rootView.findViewById(R.id.languages);
         vibrate = (SwitchMaterial) rootView.findViewById(R.id.vibrate);
@@ -58,6 +74,8 @@ public class FragmentSettings extends Fragment {
         rateUs = (TextView) rootView.findViewById(R.id.rate);
         feedBack = (TextView) rootView.findViewById(R.id.feedback);
         privacyPolicy = (TextView) rootView.findViewById(R.id.privacyPolicy);
+        download = (Button) rootView.findViewById(R.id.download);
+
 
         if(PublicVariables.selectedLanguage.equals("English")){
 
@@ -153,8 +171,46 @@ public class FragmentSettings extends Fragment {
             }
         });
 
+        download.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                downloadContents(db);
+            }
+        });
+
         return rootView;
     }
+    private void downloadContents(FirebaseFirestore db) {
+        final ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Downloading Content");
+        progressDialog.show();
+        totalDownloaded = 0;
+        db.collection("zikirs")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                                ZikirDowload zikirDownload = document.toObject(ZikirDowload.class);
+                                if(!databaseHandler.contentAlreadyExists(zikirDownload)){
+                                    ++totalDownloaded;
+                                    databaseHandler.addDownloadedZikirinDatabase(zikirDownload);
+                                }
+                            }
+                            progressDialog.dismiss();
+                            Toast.makeText(getContext(),totalDownloaded+" New Content(s) Downloaded!",Toast.LENGTH_SHORT).show();
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                            Toast.makeText(getContext(),"No Internet",Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+
+                        }
+                    }
+                });
+    }
+
     void refreshFragment(){
         getFragmentManager().beginTransaction().replace(R.id.fragmentContainer,new FragmentSettings()).commit();
     }

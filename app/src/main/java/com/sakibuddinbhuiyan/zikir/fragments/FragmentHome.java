@@ -33,6 +33,31 @@ public class FragmentHome extends Fragment {
     private String TAG = "MainActivity";
 
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        //clearing data
+        PublicVariables.zikrList.clear();
+        PublicVariables.zikrBanglaList.clear();
+        PublicVariables.todayList.clear();
+        PublicVariables.totalList.clear();
+        PublicVariables.favouriteList.clear();
+
+        PublicVariables.zikirObjList = databaseHandler.getAllZikirData();
+
+        for (Zikir zikirObj : PublicVariables.zikirObjList) {
+            PublicVariables.zikrList.add(zikirObj.zikir);
+            PublicVariables.zikrBanglaList.add(zikirObj.zikirBangla);
+            PublicVariables.todayList.add(zikirObj.readToday);
+            PublicVariables.totalList.add(zikirObj.readTotal);
+            PublicVariables.favouriteList.add(zikirObj.favourite);
+        }
+        // Create an adapter and supply the data to be displayed.
+        mAdapter = new ZikirListAdapter(getContext(), PublicVariables.zikrList, PublicVariables.todayList, PublicVariables.totalList, PublicVariables.favouriteList);
+        // Connect the adapter with the RecyclerView.
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

@@ -1,4 +1,10 @@
-#Sun Dec 06 22:50:07 BDT 2020
-base.0=E\:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Dec 07 22:33:20 BDT 2020
+path.2=classes2.dex
+path.1=classes.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=E\:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=E\:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=E\:\\MyCodes\\Zikr-Android-App-master\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex

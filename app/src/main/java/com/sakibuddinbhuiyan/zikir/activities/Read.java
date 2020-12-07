@@ -32,9 +32,9 @@ public class Read extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         databaseHandler.incrementToday(clickedToday,idOfZikir);
         databaseHandler.incrementTotal(clickedNow,idOfZikir);
-        super.onBackPressed();
     }
 
     @Override
