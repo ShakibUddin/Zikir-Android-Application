@@ -36,6 +36,7 @@ public class FragmentFavourites extends Fragment {
         super.onResume();
         //clearing data
         PublicVariables.zikrList.clear();
+        PublicVariables.zikrBanglaList.clear();
         PublicVariables.todayList.clear();
         PublicVariables.totalList.clear();
         PublicVariables.favouriteList.clear();
@@ -44,6 +45,7 @@ public class FragmentFavourites extends Fragment {
 
         for (Zikir zikirObj : PublicVariables.zikirObjList) {
             PublicVariables.zikrList.add(zikirObj.zikir);
+            PublicVariables.zikrBanglaList.add(zikirObj.zikirBangla);
             PublicVariables.todayList.add(zikirObj.readToday);
             PublicVariables.totalList.add(zikirObj.readTotal);
             PublicVariables.favouriteList.add(zikirObj.favourite);
